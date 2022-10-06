@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS REST API playground</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <div class="action__wrapper">
+            <div class="dataWrapper">
+                <button id="fullData" onclick="getData()">Get API list</button>
+            </div>
+            <div class="dataWrapper">
+                <h3>Get episode list by page</h3>
+                <button onclick="getEpisodeByPage()">Default</button>
+                <button value="3" onclick="getEpisodeByPage(this.value)">3</button>
+            </div>
+            <div class="dataWrapper">
+                <h3>Get episode by ID</h3>
+                <button value="5" onclick="getEpisodeById(this.value)">5</button>
+                <button value="17" onclick="getEpisodeById(this.value)">17</button>
+                <button value="39" onclick="getEpisodeById(this.value)">39</button>
+            </div>
+            <div class="dataWrapper">
+                <h3>Get character by ID, name, status, and gender</h3>
+                <button onclick="getCharacter(undefined, 9)">ID 9</button>
+                <button onclick="getCharacter(undefined, [3, 17, 193])">ID 3, 17 and 193</button>
+                <button onclick="getCharacter({name: 'rick', status: 'alive', gender: 'female'})">Name: Rick, Status: Alive, Gender: Female</button>
+                <button onclick="getCharacter({gender: 'female'})">Gender: Female</button>
+            </div>
+            <div class="dataWrapper">
+                <h3>Get locations by name, type or ID</h3>
+                <button onclick="getLocation()">Default first page</button>
+                <button onclick="getLocation({name: 'Citadel'})">Name: Citadel</button>
+                <button onclick="getLocation({type: 'planet', dimension: 'unknown'})">Type: Planet, Dimension: Unknown</button>
+                <button onclick="getLocation(undefined, [5, 19, 28])">ID: 5, 19, 28</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

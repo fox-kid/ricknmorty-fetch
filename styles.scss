@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dataWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block-end: 20px;
+        
+        h3 {
+            margin-block-end: 10px;
+        }
+    }
+
+    button {
+        padding: 10px 20px;
+        max-width: 200px;
+        width: fit-content;
+        margin-block-end: 6px;
+        border: none;
+        border-radius: 6px;
+        background: #9d9dbb;
+        color: #ffffff;
+        transition: 0.2s all;
+
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #8686a9;
+    }
+}
